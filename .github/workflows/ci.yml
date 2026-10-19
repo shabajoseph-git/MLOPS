@@ -24,9 +24,9 @@ jobs:
       - name: Unit tests
         run: pytest -q
       - name: Download dataset
-        run: python -m src.data
+        run: python -m src.data      
       - name: Train models
-       env:
+        env:
           MLFLOW_ALLOW_FILE_STORE: "true"
         run: python -m src.train
       - name: Upload metrics
