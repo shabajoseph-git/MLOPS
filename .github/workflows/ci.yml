@@ -26,6 +26,8 @@ jobs:
       - name: Download dataset
         run: python -m src.data
       - name: Train models
+       env:
+          MLFLOW_ALLOW_FILE_STORE: "true"
         run: python -m src.train
       - name: Upload metrics
         if: always()
