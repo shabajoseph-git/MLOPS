@@ -1,0 +1,14 @@
+flowchart TD
+  A[UCI Heart Disease Dataset] --> B[Download and validate data]
+  B --> C[EDA and preprocessing pipeline]
+  C --> D[Logistic Regression and Random Forest]
+  D --> E[Cross-validation and test metrics]
+  D --> F[MLflow experiment tracking]
+  E --> G[Selected saved model]
+  G --> H[FastAPI predict endpoint]
+  H --> I[Docker container]
+  I --> J[Kubernetes or cloud deployment]
+  H --> K[Request logs and health endpoint]
+  L[GitHub Actions CI] --> B
+  L --> D
+  L --> M[Tests and training artifacts]
